@@ -10,10 +10,10 @@ unzip("./data/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip")
 ## 'features_info.txt': Shows information about the variables used on the feature vector.
 ## 'features.txt': List of all features.
 ## The set of variables that were estimated from these signals are: 
-## mean(): Mean value
+## mean(): Mean value,
 ## std(): Standard deviation
 
-tempFeatures <- read.table("./data/UCI HAR Dataset/features.txt", stringsAsFactors = FALSE)# features[, 2] <- as.character(features[, 2])
+tempFeatures <- read.table("./data/UCI HAR Dataset/features.txt", stringsAsFactors = FALSE)
 requiedFeatures <- grep("mean|std", tempFeatures[, 2])
 requiedFeaturesLabels <- tempFeatures[requiedFeatures, 2]
 
